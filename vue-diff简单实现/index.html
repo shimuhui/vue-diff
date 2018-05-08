@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <style>
+      .allDom {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .dom {
+        border: solid 1px red;
+        width: 400px;
+        height: 600px;
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex;" id="button">
+      <button id="demo1">文本替换</button>
+      <button id="demo2">节点替换</button>
+      <button id="demo3">新增节点</button>
+      <button id="demo4">删除节点</button>
+      <button id="demo5">移动节点</button>
+      <button id="demo6">整体操作</button>
+    </div>
+    <div class="allDom">
+      <div>
+        <div id="virtualDomOld" class="dom"></div>
+        <p>old</p>
+      </div>
+      <div style="width: 60px;flex-shrink: 0;">--></div>
+      <div>
+        <div id="virtualDom" class="dom"></div>
+        <p>new</p>
+      </div>
+    </div>
+    <script src="./diff.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
